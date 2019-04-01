@@ -18,6 +18,7 @@ Then edit `newrelic.env` and set the license key on the first line:
 NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY_HERE
 ```
 
+## How to run the container
 The run script will then automatically use this key.  This will enable monitoring for the Linux agent, and the Go server.
 ```sh
 ./run.sh
