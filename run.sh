@@ -14,4 +14,4 @@ if [ -z "$BUILT" ]; then
     exit
 fi
 
-docker run --env-file=$ENV_FILE --name suse-agent-demo $IMAGE
+docker run --env-file=$ENV_FILE --name suse-agent-demo -p 8080:8080 $IMAGE

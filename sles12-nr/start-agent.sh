@@ -7,6 +7,9 @@ if ! [ -z "$NEW_RELIC_LOG_LEVEL" ]; then
    fi
 fi
 
+# Run demo server app
+/demo-server &
+
 if ! [ -z $NEW_RELIC_LICENSE_KEY ]; then
    sed -i -e "/^license_key/s+your_license_key+$NEW_RELIC_LICENSE_KEY+" \
        /etc/newrelic-infra.yml
@@ -15,5 +18,3 @@ if ! [ -z $NEW_RELIC_LICENSE_KEY ]; then
    newrelic-infra start
 fi
 
-# Run demo server app
-/demo-server

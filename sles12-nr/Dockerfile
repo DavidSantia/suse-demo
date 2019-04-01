@@ -13,6 +13,7 @@ ENV NEW_RELIC_LICENSE_KEY="" NEW_RELIC_LOG_LEVEL="info"
 ADD newrelic-infra.yml /etc/
 
 ADD start-agent.sh /
+ADD img/user.jpg /img/user.jpg
 ADD demo-server /
 
 ENTRYPOINT ["/start-agent.sh"]
